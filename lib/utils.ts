@@ -56,11 +56,22 @@ export function daysBetween(fromKey: string, toKey: string): number {
  * Поле называется «ФИО», то есть порядок — фамилия, имя, отчество.
  * Значит, имя это второе слово, а не первое: «Иванов Иван Иванович» → «Иван».
  * Если ввели одно слово — это и есть обращение.
+ *
+ * Отдельный случай — названия вместо имён: «Администратор платформы».
+ * Второе слово там со строчной буквы, и обращение «Доброй ночи, платформы»
+ * выглядит поломкой. Имя с маленькой буквы не пишут, поэтому такое
+ * сочетание — заглавное первое слово и строчное второе — считаем названием
+ * и обращаемся по первому слову. Если со строчной написано всё
+ * («иванов илья»), это просто небрежный ввод, и порядок ФИО в силе.
  */
 export function firstName(fullName: string, fallback = ''): string {
   const parts = fullName.trim().split(/\s+/).filter(Boolean);
   if (parts.length === 0) return fallback;
   if (parts.length === 1) return parts[0];
+
+  const startsLower = (word: string) => word[0] === word[0].toLowerCase() && word[0] !== word[0].toUpperCase();
+  if (startsLower(parts[1]) && !startsLower(parts[0])) return parts[0];
+
   return parts[1];
 }
 
