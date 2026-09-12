@@ -72,7 +72,27 @@ npm run db:seed    # создаёт администратора
 | `npm run db:push` | Применить схему к базе |
 | `npm run db:seed` | Создать администратора |
 | `npm run db:reset` | Пересоздать базу с нуля и заполнить заново |
+| `npm run db:clean-tests` | Удалить учётные записи, оставленные сценарными тестами |
 | `npx prisma studio` | Открыть визуальный просмотр базы |
+
+### Учётные записи от тестов
+
+Каждый прогон Playwright регистрирует нового пользователя (`audit…`, `dark…`,
+`mobile…`, `student…`, `sol…` плюс хвост таймстампа). За десяток прогонов их
+набираются сотни. Убрать:
+
+```bash
+npm run db:clean-tests -- --dry   # показать, кого удалит
+npm run db:clean-tests            # удалить
+```
+
+Скрипт удаляет только логины, совпадающие с этим шаблоном, и только с ролью
+`student`. Связанные строки уходят каскадом. Место в файле SQLite после
+удаления не освобождается само — помогает `VACUUM`:
+
+```bash
+node -e "const{PrismaClient}=require('@prisma/client');const p=new PrismaClient();p.\$executeRawUnsafe('VACUUM').finally(()=>p.\$disconnect())"
+```
 
 ### Учётная запись администратора
 
