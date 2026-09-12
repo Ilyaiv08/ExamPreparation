@@ -2,6 +2,7 @@
   "name": "exam-preparation",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "description": "Интерактивная платформа подготовки к демоэкзамену 09.02.07 «Разработчик веб и мультимедийных приложений»",
   "scripts": {
     "dev": "next dev -p 3100",
