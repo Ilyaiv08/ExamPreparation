@@ -14,6 +14,7 @@
     "db:push": "prisma db push --skip-generate",
     "db:seed": "tsx prisma/seed.ts",
     "db:reset": "prisma db push --force-reset --skip-generate && npm run db:seed",
+    "db:clean-tests": "tsx scripts/clean-test-users.ts",
     "setup": "prisma generate && npm run db:push && npm run db:seed && npm run assets",
     "postinstall": "prisma generate && node scripts/copy-assets.mjs",
     "test": "vitest run",
