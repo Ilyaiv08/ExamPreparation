@@ -18,16 +18,26 @@ const DEFAULT_PASSWORD = 'admin12345';
 
 async function main() {
   const login = process.env.ADMIN_LOGIN?.trim() || DEFAULT_LOGIN;
-  const password = process.env.ADMIN_PASSWORD?.trim() || DEFAULT_PASSWORD;
+  const explicitPassword = process.env.ADMIN_PASSWORD?.trim();
+  const password = explicitPassword || DEFAULT_PASSWORD;
 
   const existing = await prisma.user.findUnique({ where: { login } });
   if (existing) {
-    if (existing.role !== 'admin') {
-      await prisma.user.update({ where: { id: existing.id }, data: { role: 'admin' } });
-      console.log(`[seed] пользователь «${login}» получил роль администратора`);
-    } else {
-      console.log(`[seed] администратор «${login}» уже существует`);
+    // Пароль существующей учётной записи меняется только по явному
+    // ADMIN_PASSWORD: иначе повторный `npm run db:seed` молча сбрасывал бы
+    // рабочий пароль на значение по умолчанию.
+    const data: { role?: string; passwordHash?: string } = {};
+    if (existing.role !== 'admin') data.role = 'admin';
+    if (explicitPassword) data.passwordHash = await bcrypt.hash(explicitPassword, 10);
+
+    if (Object.keys(data).length === 0) {
+      console.log(`[seed] администратор «${login}» уже существует, менять нечего`);
+      return;
     }
+
+    await prisma.user.update({ where: { id: existing.id }, data });
+    if (data.role) console.log(`[seed] пользователь «${login}» получил роль администратора`);
+    if (data.passwordHash) console.log(`[seed] пароль «${login}» обновлён`);
     return;
   }
 
