@@ -1,0 +1,2222 @@
+{
+  "source": "plan_podgotovki_DE_09.02.07.md",
+  "generatedAt": "2026-09-11T22:56:34.853Z",
+  "months": [
+    {
+      "id": "month-01",
+      "monthNo": 1,
+      "title": "HTML, CSS, адаптив, Git",
+      "shortTitle": "HTML, CSS, адаптив, Git",
+      "weeks": [
+        {
+          "id": "week-01",
+          "weekNo": 1,
+          "title": "Инструменты и первые страницы",
+          "dates": "14.09 – 20.09",
+          "monthId": "month-01",
+          "days": [
+            {
+              "id": "day-01-1",
+              "dayNo": 1,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "Как устроен веб: браузер, сервер, HTTP-запрос и ответ. Что такое фронтенд, бэкенд, база данных, API",
+              "practice": "Установить VS Code (+ расширение Live Server), Node.js (версия LTS), Git. Проверить в терминале: `node -v`, `npm -v`, `git --version`. Создать `index.html` со словом «Привет»",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-2",
+              "dayNo": 2,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "Структура HTML-документа: `doctype`, `html`, `head`, `meta charset`, `meta viewport`, `title`, `body`. Заголовки `h1–h6`, `p`, `strong`, `em`. **Emmet**: `!` + Tab, `ul>li*3` + Tab",
+              "practice": "Страница «О себе». Каркас — только через Emmet",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-3",
+              "dayNo": 3,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "Ссылки `a href`, относительные и абсолютные пути. Картинки `img` (`src`, `alt`, `width`). Списки `ul`, `ol`, `li`",
+              "practice": "3 страницы, связанные ссылками, с картинками и списками",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-4",
+              "dayNo": 4,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "Git: `init`, `status`, `add`, `commit`, `log`. Что такое коммит и зачем он нужен. Как писать сообщение коммита. Панель Source Control в VS Code",
+              "practice": "Сделать репозиторий, 3 коммита: 2 через терминал, 1 через панель VS Code",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-5",
+              "dayNo": 5,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "Семантические теги: `header`, `nav`, `main`, `section`, `footer`, `div`, `span`. Таблицы: `table`, `thead`, `tbody`, `tr`, `th`, `td`",
+              "practice": "Таблица «Заявки» (№, помещение, дата, статус) — будущая админка",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-6",
+              "dayNo": 6,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "DevTools (F12): вкладки Elements и Console, режим устройства, установка размера 390×844",
+              "practice": "Открыть свои страницы в режиме смартфона 390×844, найти, что «поехало»",
+              "kind": "study"
+            },
+            {
+              "id": "day-01-7",
+              "dayNo": 7,
+              "weekId": "week-01",
+              "monthId": "month-01",
+              "theory": "**Повторение**",
+              "practice": "По памяти написать страницу со всеми выученными тегами. Выписать в тетрадь все теги с назначением. Коммит",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-02",
+          "weekNo": 2,
+          "title": "Формы и основы CSS",
+          "dates": "21.09 – 27.09",
+          "monthId": "month-01",
+          "days": [
+            {
+              "id": "day-02-1",
+              "dayNo": 1,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "Формы: `form` (`action`, `method`), `input` (`text`, `password`, `email`, `tel`), `label for` + `id`, `button type=\"submit\"`",
+              "practice": "Форма регистрации: логин, пароль, ФИО, телефон, e-mail",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-2",
+              "dayNo": 2,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "Атрибуты: `name`, `required`, `minlength`, `pattern`, `placeholder`. Элементы: `select`/`option`, `textarea`, `input type=\"date\"`, `radio`, `checkbox`",
+              "practice": "Форма входа + форма заявки (помещение, дата, способ оплаты)",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-3",
+              "dayNo": 3,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "CSS: подключение через `link`, синтаксис, селекторы (тег, `.класс`, `#id`, потомок), цвета, единицы `px`, `%`, `rem`, `vh`",
+              "practice": "Раскрасить страницу «О себе»",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-4",
+              "dayNo": 4,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "Шрифты и текст: `font-family`, `font-size`, `font-weight`, `line-height`, `text-align`. Каскад, наследование, специфичность",
+              "practice": "Оформить все три формы: шрифты, цвета",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-5",
+              "dayNo": 5,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "Блочная модель: `width`, `padding`, `border`, `margin`, `box-sizing: border-box`, `display`",
+              "practice": "Форма входа в «карточке» по центру: рамка, отступы, скругление",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-6",
+              "dayNo": 6,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "Псевдоклассы: `:hover`, `:focus`, `:invalid`, `:nth-child`. Стилизация полей и кнопок",
+              "practice": "Красивые состояния полей и кнопок (наведение, фокус, ошибка)",
+              "kind": "study"
+            },
+            {
+              "id": "day-02-7",
+              "dayNo": 7,
+              "weekId": "week-02",
+              "monthId": "month-01",
+              "theory": "**Повторение**",
+              "practice": "По памяти сверстать форму регистрации с CSS. Выписать шпаргалку CSS-свойств. Коммит",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-03",
+          "weekNo": 3,
+          "title": "Раскладка и адаптив",
+          "dates": "28.09 – 04.10",
+          "monthId": "month-01",
+          "days": [
+            {
+              "id": "day-03-1",
+              "dayNo": 1,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "Flexbox: `display: flex`, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap`",
+              "practice": "Шапка сайта: логотип слева, меню справа. Пройти игру Flexbox Froggy",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-2",
+              "dayNo": 2,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "Flexbox дальше: `flex-grow`, `flex-basis`, центрирование чего угодно",
+              "practice": "Карточки помещений (аудитория, коворкинг, кинозал) в ряд",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-3",
+              "dayNo": 3,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "Grid: `grid-template-columns`, `fr`, `repeat()`, `gap`",
+              "practice": "Сетка карточек. Пройти Grid Garden",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-4",
+              "dayNo": 4,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "`position`: `relative`, `absolute`, `fixed`, `sticky`, `z-index`",
+              "practice": "Закреплённая шапка, бейдж статуса в углу карточки",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-5",
+              "dayNo": 5,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "Адаптив: `meta viewport`, `@media`, подход mobile-first, ширина 390 px",
+              "practice": "Таблица заявок на телефоне превращается в карточки",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-6",
+              "dayNo": 6,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "Картинки: `max-width: 100%`, `object-fit`, `aspect-ratio`. Форматы JPG, PNG, WebP, SVG. Зачем сжимать",
+              "practice": "4 картинки разного размера показать одинаковыми (заготовка для слайдера)",
+              "kind": "study"
+            },
+            {
+              "id": "day-03-7",
+              "dayNo": 7,
+              "weekId": "week-03",
+              "monthId": "month-01",
+              "theory": "**Повторение**",
+              "practice": "По памяти адаптивная страница «Личный кабинет»: шапка + список заявок карточками. Коммит",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-04",
+          "weekNo": 4,
+          "title": "Анимации, Git, первый макет проекта",
+          "dates": "05.10 – 11.10",
+          "monthId": "month-01",
+          "days": [
+            {
+              "id": "day-04-1",
+              "dayNo": 1,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "`transition` (свойство, длительность, плавность), `transform` (`scale`, `translate`)",
+              "practice": "Микроанимации кнопок и карточек при наведении",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-2",
+              "dayNo": 2,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "`@keyframes`, `animation`. Правила микроанимаций: коротко (150–300 мс) и по делу",
+              "practice": "Плавное появление уведомления сверху",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-3",
+              "dayNo": 3,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "Git: ветки `branch`, `switch`, `merge`, `log --oneline`, откат изменений `restore`. Зачем коммитить перед каждым этапом",
+              "practice": "Создать ветку `design`, внести правки, слить в `main`. Тренажёр learngitbranching",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-4",
+              "dayNo": 4,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "Мини-проект, часть 1",
+              "practice": "Статичный макет «Конференции.РФ» на чистом CSS: страницы входа и регистрации",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-5",
+              "dayNo": 5,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "Мини-проект, часть 2",
+              "practice": "Страницы «Личный кабинет» и «Оформление заявки»",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-6",
+              "dayNo": 6,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "Мини-проект, часть 3",
+              "practice": "Страница админки с таблицей заявок. Всё проверить на 390×844",
+              "kind": "study"
+            },
+            {
+              "id": "day-04-7",
+              "dayNo": 7,
+              "weekId": "week-04",
+              "monthId": "month-01",
+              "theory": "**Контроль месяца 1**",
+              "practice": "С таймером, по памяти: вход + регистрация с нуля. Цель ≤ 40 минут. Записать, где застрял",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-02",
+      "monthNo": 2,
+      "title": "JavaScript, современный JS, TypeScript, Bootstrap",
+      "shortTitle": "JavaScript, современный JS, TypeScript, Bootstrap",
+      "weeks": [
+        {
+          "id": "week-05",
+          "weekNo": 5,
+          "title": "Основы JavaScript",
+          "dates": "12.10 – 18.10",
+          "monthId": "month-02",
+          "days": [
+            {
+              "id": "day-05-1",
+              "dayNo": 1,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Что такое JS, подключение `<script defer>`, `console.log`, переменные `let`/`const`, типы данных",
+              "practice": "10 мини-задач в консоли",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-2",
+              "dayNo": 2,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Операторы, `===` против `==`, шаблонные строки, `if`/`else`, тернарный оператор",
+              "practice": "Функция, которая по статусу заявки возвращает цвет",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-3",
+              "dayNo": 3,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Циклы `for`, `while`, `for...of`, `break`/`continue`",
+              "practice": "Таблица умножения, сумма чисел, поиск максимума",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-4",
+              "dayNo": 4,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Функции: объявление, параметры, `return`, стрелочные функции, область видимости",
+              "practice": "`checkLogin(login)` и `checkPassword(pass)` через `length` (пока без регулярок)",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-5",
+              "dayNo": 5,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Массивы: `push`, `length`, `forEach`, `map`, `filter`, `find`, `sort`, `includes`",
+              "practice": "Массив заявок: отфильтровать по статусу, отсортировать по дате",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-6",
+              "dayNo": 6,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "Объекты: свойства, методы, перебор. Массив объектов. Что такое JSON",
+              "practice": "«База» заявок как массив объектов, вывод через `console.table`",
+              "kind": "study"
+            },
+            {
+              "id": "day-05-7",
+              "dayNo": 7,
+              "weekId": "week-05",
+              "monthId": "month-02",
+              "theory": "**Повторение**",
+              "practice": "5 задач на функции и массивы без подсказок",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-06",
+          "weekNo": 6,
+          "title": "DOM, события, валидация, слайдер",
+          "dates": "19.10 – 25.10",
+          "monthId": "month-02",
+          "days": [
+            {
+              "id": "day-06-1",
+              "dayNo": 1,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "DOM: `querySelector`, `querySelectorAll`, `textContent`, `innerHTML`, `classList`",
+              "practice": "Кнопка скрывает/показывает блок",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-2",
+              "dayNo": 2,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "События: `addEventListener`, `click`, `input`, `submit`, `event.preventDefault()`",
+              "practice": "Меню-бургер для телефона",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-3",
+              "dayNo": 3,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "Создание элементов: `createElement`, `append`, `remove`. Отрисовка списка из массива",
+              "practice": "Вывести массив заявок карточками на страницу",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-4",
+              "dayNo": 4,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "Регулярные выражения: `^ $ [] {} + \\d`, метод `test()`. Логин: латиница и цифры, от 6 символов",
+              "practice": "Проверить 20 тестовых строк: какие логины проходят, какие нет",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-5",
+              "dayNo": 5,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "Валидация формы на JS: текст ошибки под полем, красная/зелёная подсветка, запрет отправки",
+              "practice": "Регистрация с «живой» проверкой всех полей",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-6",
+              "dayNo": 6,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "Таймеры: `setTimeout`, `setInterval`, `clearInterval`",
+              "practice": "**Свой слайдер:** 4 картинки, автосмена каждые 3000 мс, кнопки «назад/вперёд», по кругу",
+              "kind": "study"
+            },
+            {
+              "id": "day-06-7",
+              "dayNo": 7,
+              "weekId": "week-06",
+              "monthId": "month-02",
+              "theory": "**Повторение**",
+              "practice": "По памяти заново: слайдер + валидация. Цель — 30 минут на оба",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-07",
+          "weekNo": 7,
+          "title": "Современный JavaScript — фундамент для React",
+          "dates": "26.10 – 01.11",
+          "monthId": "month-02",
+          "days": [
+            {
+              "id": "day-07-1",
+              "dayNo": 1,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "Деструктуризация объектов и массивов, spread `...` и rest, `?.` и `??`",
+              "practice": "10 задач: достать поля из объекта заявки, скопировать и изменить объект без мутации",
+              "kind": "study"
+            },
+            {
+              "id": "day-07-2",
+              "dayNo": 2,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "Методы массивов ещё раз, глубже: `map`, `filter`, `find`, `sort`, `slice`, `reduce`. Почему `sort` меняет массив и как этого избежать (`[...arr].sort()`)",
+              "practice": "Массив из 30 заявок: фильтр по статусу + сортировка по дате + «страница 2 по 5 штук» через `slice`. Это будущая админка!",
+              "kind": "study"
+            },
+            {
+              "id": "day-07-3",
+              "dayNo": 3,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "Модули: `export`, `export default`, `import`. Node.js: запуск `node file.js`, `npm init -y`, `package.json`, `\"type\": \"module\"`, скрипты npm",
+              "practice": "Разбить вчерашний код на 3 файла-модуля и запустить через Node",
+              "kind": "study"
+            },
+            {
+              "id": "day-07-4",
+              "dayNo": 4,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "Асинхронность: зачем она, `Promise`, `async`/`await`, `try`/`catch`",
+              "practice": "Функция-«задержка» на Promise, цепочка из трёх асинхронных шагов",
+              "kind": "study"
+            },
+            {
+              "id": "day-07-5",
+              "dayNo": 5,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "`fetch`: GET-запрос, `response.json()`, POST с `method`, `headers`, `body: JSON.stringify(...)`. Коды ответа 200, 400, 401, 404, 500",
+              "practice": "Через Live Server загрузить `rooms.json` и вывести список на страницу",
+              "kind": "study"
+            },
+            {
+              "id": "day-07-6",
+              "dayNo": 6,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "`localStorage` (там будем хранить токен входа). Даты: `new Date()`, `toLocaleDateString('ru-RU')` → ДД.ММ.ГГГГ, разбор строки «14.09.2026» через `split('.')`",
+              "practice": "Функции `toRuDate(iso)` и `fromRuDate('14.09.2026')` с проверкой корректности",
+              "kind": "review"
+            },
+            {
+              "id": "day-07-7",
+              "dayNo": 7,
+              "weekId": "week-07",
+              "monthId": "month-02",
+              "theory": "**Повторение**",
+              "practice": "8 задач по памяти: деструктуризация, методы массивов, async/await, даты",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-08",
+          "weekNo": 8,
+          "title": "TypeScript и Bootstrap",
+          "dates": "02.11 – 08.11",
+          "monthId": "month-02",
+          "days": [
+            {
+              "id": "day-08-1",
+              "dayNo": 1,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "Зачем TypeScript. Аннотации типов, `string`, `number`, `boolean`, вывод типов, компиляция `tsc`. Как VS Code подсказывает ошибки до запуска",
+              "practice": "Переписать функции валидации на TS, намеренно сделать 5 ошибок типов и прочитать, что пишет редактор",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-2",
+              "dayNo": 2,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "Типы объектов: `type` и `interface`, необязательные поля `?`, массивы `User[]`, **литеральные типы**: `type Status = 'Новая' | 'Мероприятие назначено' | 'Мероприятие завершено'`",
+              "practice": "Описать типы `User`, `Room`, `Application`, `Review` для «Конференции.РФ» — принеси мне на проверку",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-3",
+              "dayNo": 3,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "Функции с типами параметров и результата, `Promise<T>`, `Array<T>`, `unknown` против `any` (почему `any` — плохая привычка)",
+              "practice": "Типизированная функция `getApplications(): Promise<Application[]>` на тестовых данных",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-4",
+              "dayNo": 4,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "**ООП в TS** (прямо требуется в задании): `class`, `constructor`, `private`/`public`, методы, `implements`",
+              "practice": "Класс `ApiClient` с методами `get` и `post` поверх `fetch`",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-5",
+              "dayNo": 5,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "Bootstrap: что это, сетка `container`/`row`/`col-*`, брейкпоинты, утилиты `m-*`, `p-*`, `d-flex`, `text-*`, `bg-*`, `shadow`, `rounded`",
+              "practice": "Форма входа только на классах Bootstrap, адаптивная сетка карточек",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-6",
+              "dayNo": 6,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "Компоненты Bootstrap: `form-control`, `form-select`, `is-invalid` + `invalid-feedback`, `btn`, `card`, `badge`, `table`, `navbar`, `alert`, `modal`, `toast`, `carousel`, `pagination`",
+              "practice": "Статичная админка: таблица заявок с бейджами статусов, пагинация, уведомление",
+              "kind": "study"
+            },
+            {
+              "id": "day-08-7",
+              "dayNo": 7,
+              "weekId": "week-08",
+              "monthId": "month-02",
+              "theory": "**Контроль месяца 2**",
+              "practice": "60 минут без подсказок: 5 задач на JS/TS + форма регистрации на Bootstrap. Записать результат",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-03",
+      "monthNo": 3,
+      "title": "React + TypeScript",
+      "shortTitle": "React + TypeScript",
+      "weeks": [
+        {
+          "id": "week-09",
+          "weekNo": 9,
+          "title": "Основы React",
+          "dates": "09.11 – 15.11",
+          "monthId": "month-03",
+          "days": [
+            {
+              "id": "day-09-1",
+              "dayNo": 1,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "Что такое React и SPA, что такое компонент. Создание проекта: `npm create vite@latest client -- --template react-ts`, структура (`index.html`, `main.tsx`, `App.tsx`), `npm run dev`",
+              "practice": "Создать проект, убрать всё лишнее из шаблона. Потом выключить интернет и попробовать создать второй проект — записать, получилось ли",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-2",
+              "dayNo": 2,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "Правила TSX: один корневой элемент, `className` вместо `class`, выражения в `{}`, закрывающиеся теги, `style={{...}}`. Emmet в TSX",
+              "practice": "Перенести страницу входа из месяца 1 в компонент `LoginPage`",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-3",
+              "dayNo": 3,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "Компоненты и props с типами (`interface Props`), `children`. Как разбивать страницу на части",
+              "practice": "Компоненты `Header`, `Footer`, `ApplicationCard`",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-4",
+              "dayNo": 4,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "Списки: `map` + `key`. Условный рендер: `&&`, тернарный оператор",
+              "practice": "Список заявок из массива, цвет бейджа зависит от статуса",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-5",
+              "dayNo": 5,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "`useState`, события `onClick`, `onChange`, типы событий (`React.ChangeEvent<HTMLInputElement>`)",
+              "practice": "Фильтр списка заявок по статусу кнопками",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-6",
+              "dayNo": 6,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "Bootstrap в Vite: `npm i bootstrap`, `import 'bootstrap/dist/css/bootstrap.min.css'` в `main.tsx`, свой `index.css`",
+              "practice": "Переделать компоненты на классы Bootstrap",
+              "kind": "study"
+            },
+            {
+              "id": "day-09-7",
+              "dayNo": 7,
+              "weekId": "week-09",
+              "monthId": "month-03",
+              "theory": "**Повторение**",
+              "practice": "По памяти: новый проект + список заявок с фильтром за 30 минут",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-10",
+          "weekNo": 10,
+          "title": "Формы в React",
+          "dates": "16.11 – 22.11",
+          "monthId": "month-03",
+          "days": [
+            {
+              "id": "day-10-1",
+              "dayNo": 1,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "Управляемые поля: `value` + `onChange`. Один объект состояния на всю форму",
+              "practice": "Форма из 5 полей с одним `useState`",
+              "kind": "study"
+            },
+            {
+              "id": "day-10-2",
+              "dayNo": 2,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "`onSubmit`, `preventDefault`, объект ошибок `errors`, вывод ошибки под полем (`is-invalid` + `invalid-feedback`). Регулярка для логина",
+              "practice": "Регистрация: все проверки из задания на фронтенде",
+              "kind": "study"
+            },
+            {
+              "id": "day-10-3",
+              "dayNo": 3,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "`select` из массива (`map` → `option`). Поле даты ДД.ММ.ГГГГ: маска при вводе (сама подставляет точки) + проверка корректности",
+              "practice": "Компонент `DateInput` с маской",
+              "kind": "study"
+            },
+            {
+              "id": "day-10-4",
+              "dayNo": 4,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "Разбор требований к регистрации по пунктам",
+              "practice": "Страница регистрации полностью (пока без сервера)",
+              "kind": "review"
+            },
+            {
+              "id": "day-10-5",
+              "dayNo": 5,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "Сообщение об ошибке входа. Точный текст ссылки из задания",
+              "practice": "Страница входа + ссылка «Еще не зарегистрированы? Регистрация» и обратная",
+              "kind": "study"
+            },
+            {
+              "id": "day-10-6",
+              "dayNo": 6,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "",
+              "practice": "Страница заявки: помещение, дата, способ оплаты — всё через выпадающие списки и маску",
+              "kind": "study"
+            },
+            {
+              "id": "day-10-7",
+              "dayNo": 7,
+              "weekId": "week-10",
+              "monthId": "month-03",
+              "theory": "**Повторение**",
+              "practice": "Форма регистрации с валидацией по памяти за 25 минут",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-11",
+          "weekNo": 11,
+          "title": "Маршруты, эффекты, авторизация на фронте",
+          "dates": "23.11 – 29.11",
+          "monthId": "month-03",
+          "days": [
+            {
+              "id": "day-11-1",
+              "dayNo": 1,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "React Router: `BrowserRouter`, `Routes`, `Route`, `Link`, `useNavigate`",
+              "practice": "Навигация между 5 страницами",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-2",
+              "dayNo": 2,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "`useEffect`: когда срабатывает, массив зависимостей, функция очистки. Загрузка данных при открытии страницы",
+              "practice": "Загрузка `rooms.json` при открытии страницы заявки",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-3",
+              "dayNo": 3,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "**Слайдер в React**: `useState` для номера слайда + `useEffect` с `setInterval(…, 3000)` + `clearInterval` в очистке. Одинаковый размер картинок через `object-fit`",
+              "practice": "Компонент `Slider`: 4 картинки, 3 секунды, вперёд/назад, по кругу",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-4",
+              "dayNo": 4,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "Контекст: `createContext`, `useContext`. Хранение пользователя и токена (state + `localStorage`)",
+              "practice": "`AuthContext` с функциями `login` и `logout`",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-5",
+              "dayNo": 5,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "Защищённые маршруты: компонент-обёртка, который отправляет на вход, если пользователь не вошёл, и не пускает не-админа в админку",
+              "practice": "`ProtectedRoute` и `AdminRoute`",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-6",
+              "dayNo": 6,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "Всплывающие уведомления: свой компонент `Toast` (state + `setTimeout`) или toast из Bootstrap",
+              "practice": "Уведомление «Заявка отправлена»",
+              "kind": "study"
+            },
+            {
+              "id": "day-11-7",
+              "dayNo": 7,
+              "weekId": "week-11",
+              "monthId": "month-03",
+              "theory": "**Повторение**",
+              "practice": "Слайдер + защищённый маршрут по памяти за 30 минут",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-12",
+          "weekNo": 12,
+          "title": "Весь фронтенд на тестовых данных",
+          "dates": "30.11 – 06.12",
+          "monthId": "month-03",
+          "days": [
+            {
+              "id": "day-12-1",
+              "dayNo": 1,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "Структура клиента: `pages/`, `components/`, `api/`, `types.ts`",
+              "practice": "Каркас проекта, типы, тестовые данные в отдельном файле",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-2",
+              "dayNo": 2,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "",
+              "practice": "Кабинет: мои заявки карточками, слайдер, форма отзыва **только если статус не «Новая»**",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-3",
+              "dayNo": 3,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "",
+              "practice": "Админка: таблица всех заявок, смена статуса через `select`, уведомление",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-4",
+              "dayNo": 4,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "Фильтр, сортировка и пагинация на массиве (`filter` → `sort` → `slice`)",
+              "practice": "Админка: фильтр по статусу, сортировка по дате, пагинация",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-5",
+              "dayNo": 5,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "Мобильная версия 390×844, микроанимации (`transition`), оптимизация картинок",
+              "practice": "Все страницы проверить в DevTools на 390×844",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-6",
+              "dayNo": 6,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "Git: история по этапам",
+              "practice": "Навести порядок в коммитах, `README.md`",
+              "kind": "study"
+            },
+            {
+              "id": "day-12-7",
+              "dayNo": 7,
+              "weekId": "week-12",
+              "monthId": "month-03",
+              "theory": "**Контроль месяца 3**",
+              "practice": "Весь фронтенд с тестовыми данными с нуля. Засечь время (сейчас нормально ≤ 3 часов)",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-04",
+      "monthNo": 4,
+      "title": "База данных и бэкенд",
+      "shortTitle": "База данных и бэкенд",
+      "weeks": [
+        {
+          "id": "week-13",
+          "weekNo": 13,
+          "title": "Проектирование БД и SQL",
+          "dates": "07.12 – 13.12",
+          "monthId": "month-04",
+          "days": [
+            {
+              "id": "day-13-1",
+              "dayNo": 1,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "Реляционная БД: таблица, строка, первичный ключ, `AUTO_INCREMENT`. Типы MySQL: `INT`, `VARCHAR`, `TEXT`, `DATE`, `DATETIME`, `ENUM`. Установить MySQL и Workbench (или что будет на экзамене)",
+              "practice": "На бумаге: таблица пользователей с типами полей",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-2",
+              "dayNo": 2,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "Связи 1:N и M:N, внешний ключ, справочники против `ENUM`, нормализация простыми словами",
+              "practice": "Связи для «Конференции.РФ»: пользователи, помещения, способы оплаты, заявки, отзывы",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-3",
+              "dayNo": 3,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "ER-диаграмма: сущности, атрибуты, связи, «воронья лапка». Workbench (EER Diagram) или draw.io",
+              "practice": "ER-диаграмма «Конференции.РФ» — принеси мне на проверку",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-4",
+              "dayNo": 4,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "`CREATE TABLE`: `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT`, `FOREIGN KEY ... REFERENCES`",
+              "practice": "Руками файл `schema.sql` всей БД",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-5",
+              "dayNo": 5,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "`INSERT`, `SELECT`, `WHERE`, `ORDER BY`",
+              "practice": "Тестовые данные + 10 запросов",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-6",
+              "dayNo": 6,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "`UPDATE` и `DELETE` (**всегда с `WHERE`**), `LIMIT`/`OFFSET`, `COUNT(*)`",
+              "practice": "Смена статуса заявки, «страница 2 по 5 заявок»",
+              "kind": "study"
+            },
+            {
+              "id": "day-13-7",
+              "dayNo": 7,
+              "weekId": "week-13",
+              "monthId": "month-04",
+              "theory": "**Повторение**",
+              "practice": "Новая тема (например, «Запись в автосервис»): БД + ER за 30 минут",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-14",
+          "weekNo": 14,
+          "title": "SQL глубже + разные предметные области",
+          "dates": "14.12 – 20.12",
+          "monthId": "month-04",
+          "days": [
+            {
+              "id": "day-14-1",
+              "dayNo": 1,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "`INNER JOIN`",
+              "practice": "Заявки + ФИО пользователя + название помещения + способ оплаты",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-2",
+              "dayNo": 2,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "`LEFT JOIN`, `GROUP BY`, `COUNT`",
+              "practice": "Все заявки + отзыв, если есть. Сколько заявок в каждом статусе",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-3",
+              "dayNo": 3,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "`DATE_FORMAT(date, '%d.%m.%Y')`. Проверка «занят ли логин» одним запросом",
+              "practice": "10 запросов по памяти",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-4",
+              "dayNo": 4,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "Дамп БД (экспорт/импорт `.sql`). Reverse Engineer в Workbench → ER из готовой БД → PNG",
+              "practice": "Положить `schema.sql` и ER-картинку в репозиторий",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-5",
+              "dayNo": 5,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "Как выделять сущности из текста задания: существительные → таблицы",
+              "practice": "Тема «Запись на курсы»: БД + ER за 45 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-6",
+              "dayNo": 6,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "Какие таблицы повторяются в любом варианте",
+              "practice": "Тема «Клининг» + вывод: твой **универсальный скелет БД** в тетрадь",
+              "kind": "study"
+            },
+            {
+              "id": "day-14-7",
+              "dayNo": 7,
+              "weekId": "week-14",
+              "monthId": "month-04",
+              "theory": "**Повторение**",
+              "practice": "`schema.sql` «Конференции.РФ» по памяти",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-15",
+          "weekNo": 15,
+          "title": "Node.js + Express",
+          "dates": "21.12 – 27.12",
+          "monthId": "month-04",
+          "days": [
+            {
+              "id": "day-15-1",
+              "dayNo": 1,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "Что такое сервер и API. Express: `app.get`, `app.post`, `app.listen`, `express.json()`, `res.json`, `res.status`",
+              "practice": "Сервер с маршрутом `GET /api/hello`",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-2",
+              "dayNo": 2,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "`req.params`, `req.query`, `req.body`. Коды ответа: 200, 201, 400, 401, 403, 404, 409, 500",
+              "practice": "Мини-API списка заявок в памяти (массив): получить, добавить, изменить статус",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-3",
+              "dayNo": 3,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "Как фронт общается с сервером. **Прокси в Vite** (`server.proxy` для `/api`) — чтобы не бороться с CORS. Альтернатива — пакет `cors`",
+              "practice": "React-страница получает список с сервера через `fetch`",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-4",
+              "dayNo": 4,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "Подключение к MySQL: `mysql2/promise`, пул соединений, `pool.execute(sql, [параметры])`. Что такое SQL-инъекция и почему параметры `?` обязательны",
+              "practice": "`GET /api/rooms` берёт помещения из БД",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-5",
+              "dayNo": 5,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "Проектирование API проекта: список всех маршрутов (регистрация, вход, помещения, способы оплаты, мои заявки, создание заявки, отзыв, все заявки для админа, смена статуса)",
+              "practice": "Написать список маршрутов в `README.md` — принеси мне на проверку",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-6",
+              "dayNo": 6,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "Ошибки: `try`/`catch`, понятные сообщения, валидация на сервере (не доверяй фронтенду!)",
+              "practice": "`POST /api/applications` с проверкой всех полей",
+              "kind": "study"
+            },
+            {
+              "id": "day-15-7",
+              "dayNo": 7,
+              "weekId": "week-15",
+              "monthId": "month-04",
+              "theory": "**Повторение**",
+              "practice": "Сервер с двумя маршрутами к БД по памяти за 40 минут",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-16",
+          "weekNo": 16,
+          "title": "Авторизация",
+          "dates": "28.12 – 03.01",
+          "monthId": "month-04",
+          "days": [
+            {
+              "id": "day-16-1",
+              "dayNo": 1,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "Почему пароль нельзя хранить открытым. `bcryptjs`: `hash` и `compare`",
+              "practice": "Скрипт, который хеширует пароль и проверяет его",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-2",
+              "dayNo": 2,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "Регистрация на сервере: валидация всех полей, проверка уникальности логина (ответ 409), `INSERT`",
+              "practice": "`POST /api/register`",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-3",
+              "dayNo": 3,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "Вход: найти по логину → `compare` → выдать **JWT** (`jsonwebtoken`, в токене id и роль). Ответ «Неверный логин или пароль»",
+              "practice": "`POST /api/login`",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-4",
+              "dayNo": 4,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "Middleware: проверка токена из заголовка `Authorization: Bearer ...`, проверка роли admin (ответ 403)",
+              "practice": "Защищённый маршрут `GET /api/applications/my`",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-5",
+              "dayNo": 5,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "Админ Admin26 / Demo20: seed-скрипт, который создаёт его с хешем пароля. На фронте: токен в `localStorage`, заголовок в каждом `fetch`, выход",
+              "practice": "Вход админа → переход в админку",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-6",
+              "dayNo": 6,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "ООП на сервере: класс для работы с заявками (методы «создать», «мои», «все», «сменить статус»). Где класс помогает, а где проще функция",
+              "practice": "Вынести SQL по заявкам в класс",
+              "kind": "study"
+            },
+            {
+              "id": "day-16-7",
+              "dayNo": 7,
+              "weekId": "week-16",
+              "monthId": "month-04",
+              "theory": "**Контроль месяца 4**",
+              "practice": "Full stack: регистрация + вход + защищённая страница за 75 минут",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-05",
+      "monthNo": 5,
+      "title": "Сборка Модулей 1 и 2 целиком",
+      "shortTitle": "Сборка Модулей 1 и 2 целиком",
+      "weeks": [
+        {
+          "id": "week-17",
+          "weekNo": 17,
+          "title": "Каркас и пользовательская часть",
+          "dates": "04.01 – 10.01",
+          "monthId": "month-05",
+          "days": [
+            {
+              "id": "day-17-1",
+              "dayNo": 1,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "Структура проекта (см. раздел «Цель: скелет проекта»): папки `client`, `server`, `database`. `.gitignore` с `node_modules`",
+              "practice": "Создать каркас, запустить клиент и сервер одновременно в двух терминалах, первый коммит",
+              "kind": "study"
+            },
+            {
+              "id": "day-17-2",
+              "dayNo": 2,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "Разбор требований к регистрации по пунктам: что проверяет фронт, что проверяет сервер",
+              "practice": "Регистрация full stack: форма → сервер → БД, ошибки у полей, «логин занят»",
+              "kind": "review"
+            },
+            {
+              "id": "day-17-3",
+              "dayNo": 3,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "Меню зависит от того, кто вошёл",
+              "practice": "Вход + ссылка «Еще не зарегистрированы? Регистрация» + обратная ссылка + выход",
+              "kind": "study"
+            },
+            {
+              "id": "day-17-4",
+              "dayNo": 4,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "Формат даты: на экране ДД.ММ.ГГГГ, в БД `YYYY-MM-DD`. Где переводить (на сервере)",
+              "practice": "Заявка full stack: помещения и способы оплаты из БД, маска даты, статус «Новая» по умолчанию",
+              "kind": "study"
+            },
+            {
+              "id": "day-17-5",
+              "dayNo": 5,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "`JOIN` в реальном маршруте",
+              "practice": "Кабинет: мои заявки карточками, дата через `toLocaleDateString('ru-RU')`, цветной статус",
+              "kind": "study"
+            },
+            {
+              "id": "day-17-6",
+              "dayNo": 6,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "Логика отзыва: сервер проверяет, что заявка твоя и её статус не «Новая». Фронт показывает форму только в этом случае",
+              "practice": "Отзывы full stack, один отзыв на заявку",
+              "kind": "study"
+            },
+            {
+              "id": "day-17-7",
+              "dayNo": 7,
+              "weekId": "week-17",
+              "monthId": "month-05",
+              "theory": "**Повторение**",
+              "practice": "Пройти весь путь пользователя, записать баги, исправить",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-18",
+          "weekNo": 18,
+          "title": "Панель администратора",
+          "dates": "11.01 – 17.01",
+          "monthId": "month-05",
+          "days": [
+            {
+              "id": "day-18-1",
+              "dayNo": 1,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Проверка роли в middleware на каждом админском маршруте",
+              "practice": "`GET /api/admin/applications` с `JOIN` + таблица в админке: ФИО, телефон, помещение, дата, оплата, статус",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-2",
+              "dayNo": 2,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Сервер принимает только три допустимых статуса — остальное отбрасывает с ошибкой 400",
+              "practice": "Смена статуса: `select` в строке → `PATCH` → обновление таблицы без перезагрузки",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-3",
+              "dayNo": 3,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Фильтр на массиве (`filter`)",
+              "practice": "Фильтр по статусу",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-4",
+              "dayNo": 4,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Сортировка (`[...arr].sort(...)`), по возрастанию/убыванию",
+              "practice": "Сортировка по дате и статусу, кликом по заголовку столбца",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-5",
+              "dayNo": 5,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Пагинация (`slice`) + компонент `pagination` Bootstrap. При смене фильтра — назад на страницу 1",
+              "practice": "Постраничная навигация, по 5 заявок на странице",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-6",
+              "dayNo": 6,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "Уведомления и окно подтверждения",
+              "practice": "Toast «Статус изменён» + modal «Точно сменить статус?»",
+              "kind": "study"
+            },
+            {
+              "id": "day-18-7",
+              "dayNo": 7,
+              "weekId": "week-18",
+              "monthId": "month-05",
+              "theory": "**Проверка по чек-листу**",
+              "practice": "Пройти весь раздел 1 этого плана, отметить каждый пункт. Коммит",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-19",
+          "weekNo": 19,
+          "title": "Первые прогоны Модуля 1",
+          "dates": "18.01 – 24.01",
+          "monthId": "month-05",
+          "days": [
+            {
+              "id": "day-19-1",
+              "dayNo": 1,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "",
+              "practice": "Сохрани проект в отдельной ветке и напиши Модуль 1 заново, подсматривая только в свою тетрадь. Засеки время",
+              "kind": "study"
+            },
+            {
+              "id": "day-19-2",
+              "dayNo": 2,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "Разбор: где тормозил?",
+              "practice": "Составь список «застрял на…» и повтори эти темы",
+              "kind": "review"
+            },
+            {
+              "id": "day-19-3",
+              "dayNo": 3,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "",
+              "practice": "Модуль 1 с нуля ещё раз. Цель ≤ 2 ч 30 мин",
+              "kind": "study"
+            },
+            {
+              "id": "day-19-4",
+              "dayNo": 4,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "Скоростная тренировка",
+              "practice": "Создание проектов + подключение БД + регистрация и вход за 40 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-19-5",
+              "dayNo": 5,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "Скоростная тренировка",
+              "practice": "Заявка + кабинет за 30 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-19-6",
+              "dayNo": 6,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "Скоростная тренировка",
+              "practice": "Админка со сменой статуса за 30 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-19-7",
+              "dayNo": 7,
+              "weekId": "week-19",
+              "monthId": "month-05",
+              "theory": "**Лёгкий день**",
+              "practice": "Перечитать тетрадь, отдохнуть",
+              "kind": "light"
+            }
+          ]
+        },
+        {
+          "id": "week-20",
+          "weekNo": 20,
+          "title": "Модуль 2 на живом проекте",
+          "dates": "25.01 – 31.01",
+          "monthId": "month-05",
+          "days": [
+            {
+              "id": "day-20-1",
+              "dayNo": 1,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Две линии обороны: проверка на фронте и на сервере. Ошибки сервера тоже показываем пользователю",
+              "practice": "Подсказки рядом с полями во всех формах + вывод ошибок от сервера",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-2",
+              "dayNo": 2,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Сравнение: свой слайдер против `carousel` из Bootstrap (или `react-bootstrap`, если он будет на экзамене)",
+              "practice": "Финальный слайдер в кабинете: 4 одинаковые картинки, 3 секунды, вперёд/назад",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-3",
+              "dayNo": 3,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Формат даты: `input type=\"date\"` в русском браузере показывает дд.мм.гггг, но это зависит от настроек. Надёжнее — текстовое поле с маской",
+              "practice": "Довести `DateInput`: маска, проверка, нельзя дату в прошлом. Уточни у преподавателя, какой вариант принимают",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-4",
+              "dayNo": 4,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Чек-лист мобильной версии: нет горизонтальной прокрутки, крупные кнопки, читаемый текст",
+              "practice": "Все страницы на 390×844, таблица админки → `table-responsive` или карточки",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-5",
+              "dayNo": 5,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Задание разрешает сдать макеты отдельными HTML-файлами. В React каждая страница — отдельный маршрут; уточни у преподавателя, этого достаточно или нужны ещё статичные HTML",
+              "practice": "Проверить, что каждая страница открывается по своему адресу",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-6",
+              "dayNo": 6,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "Оптимизация картинок: одинаковый размер, сжатие, `object-fit`, `loading=\"lazy\"`, картинки в `public/` или через `import`",
+              "practice": "Взять набор случайных картинок и подготовить их для слайдера",
+              "kind": "study"
+            },
+            {
+              "id": "day-20-7",
+              "dayNo": 7,
+              "weekId": "week-20",
+              "monthId": "month-05",
+              "theory": "**Контроль месяца 5**",
+              "practice": "Модуль 1 + Модуль 2 подряд с таймером. Записать время каждого",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-06",
+      "monthNo": 6,
+      "title": "Модуль 3, качество, другие предметные области",
+      "shortTitle": "Модуль 3, качество, другие предметные области",
+      "weeks": [
+        {
+          "id": "week-21",
+          "weekNo": 21,
+          "title": "Модуль 3 и качество кода",
+          "dates": "01.02 – 07.02",
+          "monthId": "month-06",
+          "days": [
+            {
+              "id": "day-21-1",
+              "dayNo": 1,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "«Доработать БД»: внешние ключи, `ON DELETE`, `UNIQUE`, связь отзыва с заявкой",
+              "practice": "Финальный `schema.sql` + обновлённая ER-диаграмма",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-2",
+              "dayNo": 2,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "Микроанимации: наведение и фокус, появление карточек, анимация уведомлений, `prefers-reduced-motion`",
+              "practice": "5 микроанимаций в проекте, не больше — чтобы не мешали",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-3",
+              "dayNo": 3,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "Качество кода: маленькие компоненты, понятные имена, типы без `any`, все запросы в папке `api/`, без копипасты",
+              "practice": "Рефакторинг своего проекта",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-4",
+              "dayNo": 4,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "Безопасность: параметры `?` во всех SQL, хеш паролей, проверка токена и роли на сервере, проверка «это твоя заявка». Фронтенду не доверяем",
+              "practice": "Пройтись по проекту и закрыть все дыры",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-5",
+              "dayNo": 5,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "Состояния интерфейса: «Загрузка…», «У вас пока нет заявок», ошибка сети. Ошибки БД не показывать пользователю как есть",
+              "practice": "Добавить эти состояния на все страницы",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-6",
+              "dayNo": 6,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "Git-история: понятные сообщения, минимум 3 коммита на модуль",
+              "practice": "Отработать ритм «этап → коммит» на мини-задаче",
+              "kind": "study"
+            },
+            {
+              "id": "day-21-7",
+              "dayNo": 7,
+              "weekId": "week-21",
+              "monthId": "month-06",
+              "theory": "**Повторение**",
+              "practice": "Перечитать тетрадь, дописать то, что забылось",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-22",
+          "weekNo": 22,
+          "title": "Второй проект — другая тема",
+          "dates": "08.02 – 14.02",
+          "monthId": "month-06",
+          "days": [
+            {
+              "id": "day-22-1",
+              "dayNo": 1,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "БД + ER-диаграмма + каркас `client`/`server`",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-2",
+              "dayNo": 2,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Регистрация + вход",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-3",
+              "dayNo": 3,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Форма заявки + кабинет + отзывы",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-4",
+              "dayNo": 4,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Админка: статусы, фильтр, сортировка, пагинация",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-5",
+              "dayNo": 5,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Дизайн, слайдер, мобильная версия",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-6",
+              "dayNo": 6,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Микроанимации, чистка кода, финальный коммит",
+              "kind": "study"
+            },
+            {
+              "id": "day-22-7",
+              "dayNo": 7,
+              "weekId": "week-22",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "**Разбор:** что было быстрее, чем в первый раз? Что всё ещё медленно?",
+              "kind": "review"
+            }
+          ]
+        },
+        {
+          "id": "week-23",
+          "weekNo": 23,
+          "title": "Третий проект быстрее + углубление",
+          "dates": "15.02 – 21.02",
+          "monthId": "month-06",
+          "days": [
+            {
+              "id": "day-23-1",
+              "dayNo": 1,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Третья тема: БД + регистрация + вход (за один день)",
+              "kind": "study"
+            },
+            {
+              "id": "day-23-2",
+              "dayNo": 2,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Заявка + кабинет + отзывы",
+              "kind": "study"
+            },
+            {
+              "id": "day-23-3",
+              "dayNo": 3,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Админка + дизайн + мобильная версия",
+              "kind": "study"
+            },
+            {
+              "id": "day-23-4",
+              "dayNo": 4,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "*Дополнительно, если всё остальное уже от зубов:* фильтр, сортировка и пагинация на сервере (`WHERE`, `ORDER BY` по белому списку, `LIMIT`/`OFFSET`, параметры в `req.query`)",
+              "practice": "Переделать админку на серверную пагинацию",
+              "kind": "study"
+            },
+            {
+              "id": "day-23-5",
+              "dayNo": 5,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "Повторение слабых тем (по твоему списку «застрял на…»)",
+              "practice": "Задачи по слабым темам",
+              "kind": "review"
+            },
+            {
+              "id": "day-23-6",
+              "dayNo": 6,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "Повторение SQL",
+              "practice": "20 запросов по памяти",
+              "kind": "review"
+            },
+            {
+              "id": "day-23-7",
+              "dayNo": 7,
+              "weekId": "week-23",
+              "monthId": "month-06",
+              "theory": "**Повторение**",
+              "practice": "Лёгкий день: тетрадь",
+              "kind": "light"
+            }
+          ]
+        },
+        {
+          "id": "week-24",
+          "weekNo": 24,
+          "title": "Всё из головы",
+          "dates": "22.02 – 28.02",
+          "monthId": "month-06",
+          "days": [
+            {
+              "id": "day-24-1",
+              "dayNo": 1,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "Выписать в тетрадь весь скелет по памяти: структуру папок, `schema.sql`, маршруты API, ключевые компоненты",
+              "practice": "Сверить с последним проектом, исправить ошибки",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-2",
+              "dayNo": 2,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Скорость: БД + ER + каркас двух проектов за 25 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-3",
+              "dayNo": 3,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Скорость: регистрация + вход full stack за 30 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-4",
+              "dayNo": 4,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Скорость: заявка + кабинет + отзывы за 30 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-5",
+              "dayNo": 5,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Скорость: админка с фильтром, сортировкой и пагинацией за 30 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-6",
+              "dayNo": 6,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "",
+              "practice": "Скорость: слайдер + валидация + мобильная версия за 40 минут",
+              "kind": "study"
+            },
+            {
+              "id": "day-24-7",
+              "dayNo": 7,
+              "weekId": "week-24",
+              "monthId": "month-06",
+              "theory": "**Контроль месяца 6**",
+              "practice": "Полный прогон 4 часа (1:30 / 1:30 / 1:00) на новой теме",
+              "kind": "control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-07",
+      "monthNo": 7,
+      "title": "Режим экзамена",
+      "shortTitle": "Режим экзамена",
+      "weeks": [
+        {
+          "id": "week-25",
+          "weekNo": 25,
+          "title": "",
+          "dates": "01.03 – 07.03",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-25-1",
+              "dayNo": 1,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон ДЭ (4 часа) — ровно по этому заданию «Конференции.РФ»",
+              "kind": "exam"
+            },
+            {
+              "id": "day-25-2",
+              "dayNo": 2,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор: пройти чек-лист раздела 1, посчитать, сколько пунктов не успел. Повторить эти темы",
+              "kind": "review"
+            },
+            {
+              "id": "day-25-3",
+              "dayNo": 3,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Тренировка самого слабого места",
+              "kind": "study"
+            },
+            {
+              "id": "day-25-4",
+              "dayNo": 4,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Модуль 1 на новой теме (1:30)",
+              "kind": "study"
+            },
+            {
+              "id": "day-25-5",
+              "dayNo": 5,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор + исправления",
+              "kind": "review"
+            },
+            {
+              "id": "day-25-6",
+              "dayNo": 6,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Модуль 2 на том же проекте (1:30)",
+              "kind": "study"
+            },
+            {
+              "id": "day-25-7",
+              "dayNo": 7,
+              "weekId": "week-25",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых",
+              "kind": "rest"
+            }
+          ]
+        },
+        {
+          "id": "week-26",
+          "weekNo": 26,
+          "title": "",
+          "dates": "08.03 – 14.03",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-26-1",
+              "dayNo": 1,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Модуль 3 на том же проекте (1:00)",
+              "kind": "study"
+            },
+            {
+              "id": "day-26-2",
+              "dayNo": 2,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор всех трёх модулей",
+              "kind": "review"
+            },
+            {
+              "id": "day-26-3",
+              "dayNo": 3,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон на новой теме",
+              "kind": "exam"
+            },
+            {
+              "id": "day-26-4",
+              "dayNo": 4,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор",
+              "kind": "review"
+            },
+            {
+              "id": "day-26-5",
+              "dayNo": 5,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Скоростные тренировки по списку слабых мест",
+              "kind": "study"
+            },
+            {
+              "id": "day-26-6",
+              "dayNo": 6,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Скоростные тренировки по списку слабых мест",
+              "kind": "study"
+            },
+            {
+              "id": "day-26-7",
+              "dayNo": 7,
+              "weekId": "week-26",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых",
+              "kind": "rest"
+            }
+          ]
+        },
+        {
+          "id": "week-27",
+          "weekNo": 27,
+          "title": "Прогоны экзамена",
+          "dates": "15.03 – 04.04",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-27-1",
+              "dayNo": 1,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-27-2",
+              "dayNo": 2,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-27-3",
+              "dayNo": 3,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Тренировка слабых мест",
+              "kind": "study"
+            },
+            {
+              "id": "day-27-4",
+              "dayNo": 4,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-27-5",
+              "dayNo": 5,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-27-6",
+              "dayNo": 6,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Повторение тетради + SQL по памяти",
+              "kind": "review"
+            },
+            {
+              "id": "day-27-7",
+              "dayNo": 7,
+              "weekId": "week-27",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых",
+              "kind": "rest"
+            }
+          ]
+        },
+        {
+          "id": "week-28",
+          "weekNo": 28,
+          "title": "Прогоны экзамена",
+          "dates": "15.03 – 04.04",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-28-1",
+              "dayNo": 1,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-28-2",
+              "dayNo": 2,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-28-3",
+              "dayNo": 3,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Тренировка слабых мест",
+              "kind": "study"
+            },
+            {
+              "id": "day-28-4",
+              "dayNo": 4,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-28-5",
+              "dayNo": 5,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-28-6",
+              "dayNo": 6,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Повторение тетради + SQL по памяти",
+              "kind": "review"
+            },
+            {
+              "id": "day-28-7",
+              "dayNo": 7,
+              "weekId": "week-28",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых",
+              "kind": "rest"
+            }
+          ]
+        },
+        {
+          "id": "week-29",
+          "weekNo": 29,
+          "title": "Прогоны экзамена",
+          "dates": "15.03 – 04.04",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-29-1",
+              "dayNo": 1,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-29-2",
+              "dayNo": 2,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-29-3",
+              "dayNo": 3,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Тренировка слабых мест",
+              "kind": "study"
+            },
+            {
+              "id": "day-29-4",
+              "dayNo": 4,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон (4 часа), новая тема",
+              "kind": "exam"
+            },
+            {
+              "id": "day-29-5",
+              "dayNo": 5,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор по чек-листу",
+              "kind": "review"
+            },
+            {
+              "id": "day-29-6",
+              "dayNo": 6,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Повторение тетради + SQL по памяти",
+              "kind": "review"
+            },
+            {
+              "id": "day-29-7",
+              "dayNo": 7,
+              "weekId": "week-29",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых",
+              "kind": "rest"
+            }
+          ]
+        },
+        {
+          "id": "week-30",
+          "weekNo": 30,
+          "title": "Закрепление",
+          "dates": "05.04 – 11.04",
+          "monthId": "month-07",
+          "days": [
+            {
+              "id": "day-30-1",
+              "dayNo": 1,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон ровно по заданию «Конференции.РФ» — сравни с результатом 25-й недели",
+              "kind": "exam"
+            },
+            {
+              "id": "day-30-2",
+              "dayNo": 2,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор",
+              "kind": "review"
+            },
+            {
+              "id": "day-30-3",
+              "dayNo": 3,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Перечитать тетрадь целиком",
+              "kind": "study"
+            },
+            {
+              "id": "day-30-4",
+              "dayNo": 4,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Полный прогон на теме, которую ты ещё не делал",
+              "kind": "exam"
+            },
+            {
+              "id": "day-30-5",
+              "dayNo": 5,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Разбор",
+              "kind": "review"
+            },
+            {
+              "id": "day-30-6",
+              "dayNo": 6,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Составить личный «план первых 10 минут экзамена» (что делаешь сразу после получения задания)",
+              "kind": "study"
+            },
+            {
+              "id": "day-30-7",
+              "dayNo": 7,
+              "weekId": "week-30",
+              "monthId": "month-07",
+              "theory": "",
+              "practice": "Отдых — ты это заслужил",
+              "kind": "rest"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

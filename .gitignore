@@ -1,0 +1,28 @@
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# База данных (локальная, у каждого своя)
+*.db
+*.db-journal
+prisma/dev.db*
+
+# Окружение
+.env
+.env.local
+
+# Скопированные локальные ассеты (восстанавливаются `npm run assets`)
+public/vendor/
+
+# Тесты
+/test-results/
+/playwright-report/
+/coverage/
+
+# Учебные материалы колледжа: в репозиторий не выкладываются.
+# Всё, что платформа из них берёт, уже перенесено в content/ (см. README).
+plan_podgotovki_DE_09.02.07.md
+V2_KOD_09_02_07-3-2026-PU.pdf

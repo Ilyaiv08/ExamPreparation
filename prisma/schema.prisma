@@ -1,0 +1,364 @@
+// Схема данных платформы подготовки к демоэкзамену 09.02.07.
+//
+// Учебный КОНТЕНТ (месяцы, недели, дни, уроки, темы, задания, тесты, проекты, экзамены)
+// хранится в файлах `content/**` — см. docs/ANALYSIS.md, раздел 6.
+// В базе живут только ПОЛЬЗОВАТЕЛЬСКИЕ данные и правки контента из админки (ContentOverride).
+//
+// СУБД по умолчанию — SQLite (запуск без установки сервера, работает офлайн).
+// Переключение на PostgreSQL: provider = "postgresql" + DATABASE_URL в .env.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────── Пользователь ───────────────────────────────
+
+model User {
+  id           String    @id @default(cuid())
+  login        String    @unique
+  passwordHash String
+  fullName     String
+  email        String?
+  phone        String?
+  role         String    @default("student") // student | admin
+  // Дата старта обучения: от неё считается «сегодняшний день» учебного плана.
+  startDate    DateTime  @default(now())
+  // Дата демоэкзамена: включает предэкзаменационный режим (раздел 42 ТЗ).
+  examDate     DateTime?
+  theme        String    @default("system") // system | light | dark
+  fontScale    Int       @default(100)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  progress          Progress[]
+  submissions       Submission[]
+  drafts            CodeDraft[]
+  quizAttempts      QuizAttempt[]
+  examAttempts      ExamAttempt[]
+  reviewItems       ReviewItem[]
+  achievements      UserAchievement[]
+  notes             Note[]
+  bookmarks         Bookmark[]
+  studySessions     StudySession[]
+  topicStats        TopicStat[]
+  projectSubmissions ProjectSubmission[]
+  generatedExams    GeneratedExam[]
+}
+
+// ─────────────────────────────── Прогресс ───────────────────────────────────
+
+/// Универсальный прогресс по любой сущности контента.
+/// entityType: lesson | day | week | month | topic | task | project | exam | quiz
+model Progress {
+  id           String    @id @default(cuid())
+  userId       String
+  entityType   String
+  entityId     String
+  status       String    @default("not_started") // locked | not_started | in_progress | completed | review
+  score        Float?
+  bestScore    Float?
+  attempts     Int       @default(0)
+  timeSpentSec Int       @default(0)
+  completedAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, entityType, entityId])
+  @@index([userId, entityType])
+  @@index([userId, status])
+}
+
+// ─────────────────────── Практические задания и код ─────────────────────────
+
+/// Попытка сдачи практического задания. Хранится КАЖДАЯ попытка (раздел 39 ТЗ).
+model Submission {
+  id          String   @id @default(cuid())
+  userId      String
+  taskId      String
+  attemptNo   Int      @default(1)
+  language    String
+  code        String
+  passed      Boolean  @default(false)
+  passedTests Int      @default(0)
+  totalTests  Int      @default(0)
+  score       Float    @default(0)
+  maxScore    Float    @default(0)
+  hintsUsed   Int      @default(0)
+  runtimeMs   Int      @default(0)
+  /// Полный отчёт по тестам в JSON: имя теста, ожидание, факт, ошибка.
+  resultJson  String   @default("{}")
+  source      String   @default("task") // task | exam | project | review
+  examAttemptId String?
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, taskId])
+  @@index([userId, createdAt])
+}
+
+/// Автосохранение кода в редакторе (раздел 38 ТЗ): пользователь не теряет работу.
+model CodeDraft {
+  id        String   @id @default(cuid())
+  userId    String
+  taskId    String
+  code      String
+  language  String   @default("javascript")
+  hintsUsed Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, taskId])
+}
+
+// ──────────────────────────── Теоретические тесты ───────────────────────────
+
+model QuizAttempt {
+  id           String   @id @default(cuid())
+  userId       String
+  quizId       String
+  /// Ответы пользователя: { [questionId]: answer }
+  answersJson  String   @default("{}")
+  /// Разбор по вопросам: правильно/неправильно, что ожидалось.
+  resultJson   String   @default("{}")
+  score        Float    @default(0)
+  maxScore     Float    @default(0)
+  correctCount Int      @default(0)
+  totalCount   Int      @default(0)
+  durationMs   Int      @default(0)
+  source       String   @default("quiz") // quiz | review | exam
+  createdAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, quizId])
+}
+
+// ──────────────────────────────── Экзамены ──────────────────────────────────
+
+/// Сгенерированный тренировочный вариант (раздел 22 ТЗ).
+/// Спецификация варианта хранится целиком, чтобы попытку можно было воспроизвести.
+model GeneratedExam {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  level     String // easy | standard | hard | exam
+  specJson  String
+  createdAt DateTime @default(now())
+
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempts ExamAttempt[]
+
+  @@index([userId, createdAt])
+}
+
+model ExamAttempt {
+  id              String    @id @default(cuid())
+  userId          String
+  examId          String
+  generatedExamId String?
+  mode            String    @default("practice") // practice | demo | final
+  status          String    @default("in_progress") // in_progress | finished | aborted
+  startedAt       DateTime  @default(now())
+  finishedAt      DateTime?
+  /// Состояние таймеров по модулям: [{ moduleId, startedAt, endsAt, finished }]
+  modulesJson     String    @default("[]")
+  score           Float     @default(0)
+  maxScore        Float     @default(0)
+  percent         Float     @default(0)
+  /// Результаты по навыкам/темам для анализа сильных и слабых сторон.
+  analysisJson    String    @default("{}")
+  durationSec     Int       @default(0)
+
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  generated GeneratedExam?   @relation(fields: [generatedExamId], references: [id], onDelete: Cascade)
+  answers   ExamTaskAnswer[]
+
+  @@index([userId, examId])
+  @@index([userId, startedAt])
+}
+
+model ExamTaskAnswer {
+  id         String   @id @default(cuid())
+  attemptId  String
+  examTaskId String
+  kind       String // code | quiz | checklist | sql | text
+  /// Ответ: код, выбранные варианты, отмеченные пункты чек-листа.
+  answerJson String   @default("{}")
+  resultJson String   @default("{}")
+  score      Float    @default(0)
+  maxScore   Float    @default(0)
+  passed     Boolean  @default(false)
+  updatedAt  DateTime @updatedAt
+
+  attempt ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@unique([attemptId, examTaskId])
+}
+
+// ────────────────────────────── Мини-проекты ────────────────────────────────
+
+model ProjectSubmission {
+  id            String   @id @default(cuid())
+  userId        String
+  projectId     String
+  /// Отмеченные пункты чек-листа: { [checkId]: boolean }
+  checklistJson String   @default("{}")
+  /// Файлы решения: { [path]: content } — проверяются автотестами проекта.
+  filesJson     String   @default("{}")
+  notes         String   @default("")
+  repoUrl       String?
+  autoScore     Float    @default(0)
+  autoMaxScore  Float    @default(0)
+  checklistScore Float   @default(0)
+  status        String   @default("in_progress") // in_progress | submitted | completed
+  resultJson    String   @default("{}")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+}
+
+// ────────────────────── Повторение (spaced repetition) ──────────────────────
+
+model ReviewItem {
+  id          String    @id @default(cuid())
+  userId      String
+  topicId     String
+  /// Причина попадания в повторение: failed_task | failed_quiz | manual | exam
+  reason      String    @default("manual")
+  /// Коэффициент лёгкости SM-2 (2.5 — стартовый).
+  ease        Float     @default(2.5)
+  intervalDays Int      @default(0)
+  repetitions Int       @default(0)
+  lapses      Int       @default(0)
+  dueAt       DateTime  @default(now())
+  lastReviewedAt DateTime?
+  lastGrade   Int?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, topicId])
+  @@index([userId, dueAt])
+}
+
+// ─────────────────────────── Достижения и заметки ───────────────────────────
+
+model UserAchievement {
+  id         String   @id @default(cuid())
+  userId     String
+  code       String
+  progress   Int      @default(0)
+  unlockedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, code])
+}
+
+model Note {
+  id         String   @id @default(cuid())
+  userId     String
+  entityType String // topic | lesson | task | project | exam
+  entityId   String
+  body       String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, entityType, entityId])
+  @@index([userId, updatedAt])
+}
+
+model Bookmark {
+  id         String   @id @default(cuid())
+  userId     String
+  entityType String
+  entityId   String
+  title      String
+  url        String
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, entityType, entityId])
+}
+
+// ──────────────────────── Статистика и аналитика ────────────────────────────
+
+/// Дневная активность: основа для streak и графиков (разделы 10, 24 ТЗ).
+model StudySession {
+  id              String   @id @default(cuid())
+  userId          String
+  /// Локальная дата в формате YYYY-MM-DD (без времени, чтобы streak считался по дням).
+  date            String
+  theoryMinutes   Int      @default(0)
+  practiceMinutes Int      @default(0)
+  tasksAttempted  Int      @default(0)
+  tasksSolved     Int      @default(0)
+  quizzesTaken    Int      @default(0)
+  lessonsDone     Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+  @@index([userId, date])
+}
+
+/// Агрегат по теме — источник списка слабых тем и рекомендаций (разделы 18, 40 ТЗ).
+model TopicStat {
+  id            String    @id @default(cuid())
+  userId        String
+  topicId       String
+  attempts      Int       @default(0)
+  solved        Int       @default(0)
+  failed        Int       @default(0)
+  hintsUsed     Int       @default(0)
+  totalTimeMs   Int       @default(0)
+  quizCorrect   Int       @default(0)
+  quizTotal     Int       @default(0)
+  lastAttemptAt DateTime?
+  lastSuccessAt DateTime?
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, topicId])
+  @@index([userId])
+}
+
+// ─────────────────────── Правки контента из админки ─────────────────────────
+
+/// Переопределение файлового контента (раздел 31 ТЗ):
+/// админ меняет тему/урок/задание, не трогая исходный код.
+model ContentOverride {
+  id         String   @id @default(cuid())
+  entityType String // topic | lesson | task | quiz | project | exam | month | week | day
+  entityId   String
+  /// Полный объект сущности в JSON; поля перекрывают файловые.
+  dataJson   String
+  disabled   Boolean  @default(false)
+  /// Создан ли объект полностью в админке (нет файлового прообраза).
+  isNew      Boolean  @default(false)
+  updatedBy  String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([entityType, entityId])
+  @@index([entityType])
+}

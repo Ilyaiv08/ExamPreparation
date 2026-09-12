@@ -1,0 +1,135 @@
+import type { AchievementDef } from './types';
+
+/** Достижения (раздел 25 ТЗ). Условия проверяются в lib/achievements.ts. */
+export const ACHIEVEMENTS: AchievementDef[] = [
+  {
+    code: 'first-task',
+    title: 'Первая решённая задача',
+    description: 'Все тесты одного практического задания пройдены.',
+    icon: '🏆',
+    rule: { type: 'tasks_solved', count: 1 },
+  },
+  {
+    code: 'tasks-10',
+    title: '10 решённых задач',
+    description: 'Десять заданий закрыты полностью.',
+    icon: '🎯',
+    rule: { type: 'tasks_solved', count: 10 },
+  },
+  {
+    code: 'tasks-50',
+    title: '50 решённых задач',
+    description: 'Полсотни заданий — это уже уверенная практика.',
+    icon: '🚀',
+    rule: { type: 'tasks_solved', count: 50 },
+  },
+  {
+    code: 'tasks-100',
+    title: '100 решённых задач',
+    description: 'Сотня заданий позади.',
+    icon: '💪',
+    rule: { type: 'tasks_solved', count: 100 },
+  },
+  {
+    code: 'streak-3',
+    title: '3 дня подряд',
+    description: 'Три дня занятий без пропуска.',
+    icon: '🔥',
+    rule: { type: 'streak_days', count: 3 },
+  },
+  {
+    code: 'streak-7',
+    title: '7 дней подряд',
+    description: 'Неделя без пропусков — ровно тот ритм, которого просит программа.',
+    icon: '🔥',
+    rule: { type: 'streak_days', count: 7 },
+  },
+  {
+    code: 'streak-30',
+    title: '30 дней подряд',
+    description: 'Месяц ежедневной подготовки.',
+    icon: '🌟',
+    rule: { type: 'streak_days', count: 30 },
+  },
+  {
+    code: 'quiz-perfect',
+    title: '100% в тесте',
+    description: 'Теоретический тест пройден без единой ошибки.',
+    icon: '💯',
+    rule: { type: 'quiz_perfect', count: 1 },
+  },
+  {
+    code: 'quiz-perfect-10',
+    title: '10 идеальных тестов',
+    description: 'Десять тестов подряд на 100 % — теория держится.',
+    icon: '📚',
+    rule: { type: 'quiz_perfect', count: 10 },
+  },
+  {
+    code: 'no-hints-5',
+    title: 'Решение без подсказок',
+    description: 'Пять заданий решены без единой подсказки.',
+    icon: '⭐',
+    rule: { type: 'no_hints_solved', count: 5 },
+  },
+  {
+    code: 'first-exam',
+    title: 'Первый пробный экзамен',
+    description: 'Тренировочный вариант пройден до конца.',
+    icon: '🎓',
+    rule: { type: 'exam_taken', count: 1 },
+  },
+  {
+    code: 'exam-80',
+    title: 'Экзамен на 80%',
+    description: 'Результат тренировочного экзамена не ниже 80 %.',
+    icon: '🥇',
+    rule: { type: 'exam_percent', percent: 80 },
+  },
+  {
+    code: 'exam-5',
+    title: 'Пять прогонов',
+    description: 'Пять экзаменационных попыток — как требует месяц 7 программы.',
+    icon: '⏱️',
+    rule: { type: 'exam_taken', count: 5 },
+  },
+  {
+    code: 'project-1',
+    title: 'Первый мини-проект',
+    description: 'Мини-проект сдан и проверен.',
+    icon: '🧩',
+    rule: { type: 'project_completed', count: 1 },
+  },
+  {
+    code: 'project-3',
+    title: 'Три мини-проекта',
+    description: 'Три законченных приложения на разных предметных областях.',
+    icon: '🏗️',
+    rule: { type: 'project_completed', count: 3 },
+  },
+  {
+    code: 'review-20',
+    title: '20 повторений',
+    description: 'Двадцать карточек интервального повторения закрыто.',
+    icon: '🔁',
+    rule: { type: 'review_done', count: 20 },
+  },
+  { code: 'month-1', title: 'Завершён месяц 1', description: 'HTML, CSS, адаптив и Git позади.', icon: '🥉', rule: { type: 'month_completed', monthNo: 1 } },
+  { code: 'month-2', title: 'Завершён месяц 2', description: 'JavaScript, TypeScript и Bootstrap освоены.', icon: '🥈', rule: { type: 'month_completed', monthNo: 2 } },
+  { code: 'month-3', title: 'Завершён месяц 3', description: 'React с TypeScript пройден.', icon: '🥇', rule: { type: 'month_completed', monthNo: 3 } },
+  { code: 'month-4', title: 'Завершён месяц 4', description: 'База данных и бэкенд работают.', icon: '🗄️', rule: { type: 'month_completed', monthNo: 4 } },
+  { code: 'month-5', title: 'Завершён месяц 5', description: 'Модули 1 и 2 собраны целиком.', icon: '🧱', rule: { type: 'month_completed', monthNo: 5 } },
+  { code: 'month-6', title: 'Завершён месяц 6', description: 'Качество кода и новые предметные области.', icon: '🛠️', rule: { type: 'month_completed', monthNo: 6 } },
+  { code: 'month-7', title: 'Завершён месяц 7', description: 'Режим экзамена пройден.', icon: '🏁', rule: { type: 'month_completed', monthNo: 7 } },
+  {
+    code: 'course-complete',
+    title: 'Завершена вся программа',
+    description: 'Все 30 недель подготовки закрыты.',
+    icon: '👑',
+    rule: { type: 'course_completed' },
+  },
+];
+
+export function getAchievement(code: string): AchievementDef | undefined {
+  return ACHIEVEMENTS.find((item) => item.code === code);
+}
