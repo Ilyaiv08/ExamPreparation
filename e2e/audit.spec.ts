@@ -108,6 +108,32 @@ test('все страницы открываются и содержат заг�
   expect(broken).toEqual([]);
 });
 
+test('боковое меню остаётся на экране при прокрутке', async () => {
+  // Регрессия: меню было обычной колонкой сетки и растягивалось на всю
+  // страницу. Карточка пользователя с выходом оказывалась у нижнего края
+  // документа, и до неё приходилось прокручивать весь список недель.
+  await page.goto('/plan');
+  await page.waitForLoadState('networkidle');
+
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForTimeout(200);
+
+  const scrolled = await page.evaluate(() => window.scrollY);
+  expect(scrolled, 'страница должна быть длинной, иначе проверка ничего не значит').toBeGreaterThan(200);
+
+  // «Дашборд» есть и в меню, и в хлебных крошках — ищем только внутри меню.
+  const sidebar = page.getByRole('complementary', { name: 'Основная навигация' });
+
+  const viewport = page.viewportSize();
+  const box = await sidebar.boundingBox();
+  expect(box, 'меню должно быть на экране').not.toBeNull();
+  expect(box!.y, 'верх меню не должен уезжать вверх').toBeLessThanOrEqual(1);
+  expect(box!.height, 'меню должно быть ростом с окно, а не со страницу').toBeLessThanOrEqual(viewport!.height + 1);
+
+  await expect(page.getByRole('button', { name: 'Выйти' })).toBeInViewport();
+  await expect(sidebar.getByRole('link', { name: 'Дашборд' })).toBeInViewport();
+});
+
 test('в консоли нет ошибок приложения', () => {
   expect(consoleErrors).toEqual([]);
 });

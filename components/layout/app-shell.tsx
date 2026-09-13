@@ -145,15 +145,23 @@ export function AppShell({ user, children }: { user: ShellUser; children: ReactN
       </a>
 
       {/* Боковое меню: на мобильных превращается в drawer (раздел 36 ТЗ) */}
+      {/*
+        На широком экране меню липкое и ровно в высоту окна: `lg:static` делал
+        его обычной колонкой сетки, растянутой на всю страницу, и карточка
+        пользователя оказывалась у самого низа документа — до неё приходилось
+        прокручивать весь план. Теперь колонка стоит на месте при прокрутке,
+        а длинный список пунктов скроллится внутри себя.
+      */}
       <aside
         className={cn(
-          'fixed inset-y-0 left-0 z-40 w-[250px] border-r transition-transform duration-200 lg:static lg:translate-x-0',
+          'fixed inset-y-0 left-0 z-40 flex w-[250px] flex-col border-r transition-transform duration-200',
+          'lg:sticky lg:top-0 lg:h-screen lg:translate-x-0',
           drawerOpen ? 'translate-x-0' : '-translate-x-full',
         )}
         style={{ background: 'var(--surface)', borderColor: 'var(--line)' }}
         aria-label="Основная навигация"
       >
-        <div className="flex h-14 items-center justify-between gap-2 border-b px-4" style={{ borderColor: 'var(--line)' }}>
+        <div className="flex h-14 shrink-0 items-center justify-between gap-2 border-b px-4" style={{ borderColor: 'var(--line)' }}>
           <Link href="/" className="flex min-h-[32px] items-center gap-2 font-semibold">
             <span
               className="grid h-7 w-7 place-items-center rounded-lg text-xs font-bold text-white"
@@ -179,7 +187,7 @@ export function AppShell({ user, children }: { user: ShellUser; children: ReactN
           </button>
         </div>
 
-        <nav className="flex flex-col gap-0.5 overflow-y-auto p-2" style={{ maxHeight: 'calc(100vh - 3.5rem - 84px)' }}>
+        <nav className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto p-2">
           {nav.map((item) => {
             const active = item.exact ? pathname === item.href : pathname.startsWith(item.href);
             const Icon = item.icon;
@@ -201,7 +209,7 @@ export function AppShell({ user, children }: { user: ShellUser; children: ReactN
           })}
         </nav>
 
-        <div className="absolute inset-x-0 bottom-0 border-t p-2" style={{ borderColor: 'var(--line)' }}>
+        <div className="shrink-0 border-t p-2" style={{ borderColor: 'var(--line)' }}>
           <div className="flex items-center gap-2 rounded-lg px-2 py-1.5">
             <span
               className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-semibold"
