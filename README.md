@@ -118,6 +118,3 @@ npm run typecheck && npm run lint && npm run content:check && npm test
 | [`docs/ANALYSIS.md`](./docs/ANALYSIS.md) | Разбор источников: что в них есть, чего нет, какие решения приняты |
 | [`docs/GRADING.md`](./docs/GRADING.md) | Модель оценивания: формулы, веса и обоснование каждого числа |
 
-## Лицензия
-
-[MIT](./LICENSE).
